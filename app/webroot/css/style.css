@@ -1,0 +1,1453 @@
+@charset "utf-8";
+
+/* GENERALES */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, #container{
+    min-height:100%;
+    height:100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+/* NO RESULTS */
+p.no-results{
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+}
+
+/* SELECT 2 STYLES */
+.hideSearch{
+    display: none !important;
+}
+
+/* FLASH MESSAGES - ERRORES */
+
+#flashMessage{
+    clear: both;
+    text-transform: uppercase;
+    padding: 20px;
+    background-color: #33BD00;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 3px;
+    box-sizing:border-box;
+}
+#flashMessage.errormsg{
+    background-color: #C73700;
+}
+
+
+
+
+
+/* BOTON ADMINISTRADOR */
+.button{
+    padding: 6.5px 10px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    line-height: 15px;
+    background-color: #555;
+    border: 1px solid #333;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+    float:left;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.button.short{
+    margin-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button:hover{
+    background-color: #333 !important;
+    border-color: #333 !important;
+}
+
+.button.right{
+    float:right;
+}
+
+.button.icon.print{
+    background-image: url(../img/bkg/print.png);
+    background-position:right;
+    background-repeat: no-repeat;
+    padding-right:35px;
+}
+
+
+
+
+
+/* NAVIGATION */
+nav{
+    font-weight: lighter;
+    background-color: #333;
+    width:300px;
+    float:left;
+    position:fixed;
+    background-repeat: repeat;
+    z-index: 10;
+}
+
+nav.hidden{
+    left:-300px;
+    transition:0.5s all ease-out;
+}
+
+nav.no-hidden{
+    left:0;
+    transition:0.5s all ease-out;
+}
+
+nav .content-nav{
+    color: white;
+}
+
+nav .close-nav.no-hidden{
+    margin-right:0;
+    transition:0.5s all ease-out;
+}
+
+nav .close-nav.hidden{
+    margin-right:-70px;
+    transition:0.5s all ease-out;
+}
+
+nav .close-nav,
+nav .logout{
+    float:right;
+    width:70px;
+    height:70px;
+    background-color:#333;
+}
+
+nav .logout{
+    margin-right:-70px;
+    margin-top:70px;
+    background-color: #444;
+}
+
+
+nav .close-nav:hover,
+nav .logout:hover{
+    cursor:pointer;
+}
+
+nav .close-nav img,
+nav .logout img{
+    width:50px;
+    float:right;
+    margin:10px;
+}
+
+nav .logo{
+    width:230px;
+    float:left;
+    background-color: #222;
+    height:70px;
+    padding:10px 0px;
+    box-sizing: border-box;
+}
+
+nav .logo .content-logo{
+    height:55px;
+    margin:0 auto;
+}
+
+nav .logo img{
+    height: 44px;
+    display: block;
+    margin: 5px auto;
+}
+
+nav .items{
+
+}
+
+nav .items .menu-item{
+    display: block;
+    text-transform: uppercase;
+    padding:10px 20px;
+    color:white;
+    text-decoration: none;
+    font-weight: lighter;
+    display: block;
+    text-align: right;
+    transition: 0.2s all ease-in-out;
+}
+
+nav .items .menu-item:hover,
+nav .items .menu-item.activo{
+    background-color: rgba(0,0,0,0.5) !important;
+    border-color: rgba(0,0,0,0.5) !important;
+}
+
+nav .items .logout-min{
+    height:13px;
+    margin-top:5px;
+}
+
+/* FLOW CONTENT */
+#flow-content{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 20px 20px 90px;
+    background-color: rgba(255,255,255, 0.8);
+    box-sizing:border-box;
+}
+
+#flow-content.login-flow{
+    padding:20px !important;
+}
+
+
+
+
+
+/* HEADER HOME */
+header.home{
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+header.home h1{
+    margin-bottom: 10px;
+}
+
+/* BLOQUES HOME */
+.content-bloques .bloque{
+    display: table;
+    box-sizing:border-box;
+    transition: 0.2s all ease-in-out;
+    margin: 10px 10px;
+    width: calc(50% - 20px);
+    float: left;
+    text-align: center;
+    font-size: 20px;
+}
+
+.content-bloques .bloque:hover{
+    opacity: 0.7;
+}
+.content-bloques .bloque a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+
+
+
+/* ---------- HEADER ADMINISTRADOR ---------- */
+header{
+    margin-bottom: 20px;
+    background-color: #999;
+}
+header h2{
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: white;
+    padding: 30px 20px;
+    color: white;
+    transition: all 0.2s ease-out;
+}
+header h2:hover{
+    background-color: #333 !important;
+}
+header h2 a{
+    color: white;
+}
+
+/* ----- MIGAS DE PAN ----- */
+header .breadcrumbs{
+    text-transform: uppercase;
+    padding:5px;
+    background-color: #eee;
+}
+header .breadcrumbs a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* ------- CABECERA PREVIA TABLA ------- */
+.top{
+    clear: both;
+    margin-bottom: 20px;
+    display: table;
+    width: 100%;
+}
+
+/* ----- OPERACIONES CABECERA ----- */
+.top .actions{
+    clear:both;
+    display: table-cell;
+    width: 50%;
+}
+
+/* BUSQUEDA */
+.top .search{
+    display: table-cell;
+    width: 50%;
+}
+.top .search .search-form{
+    display: table;
+    width: 100%;
+}
+.top .search .search-form .input.text{
+    display: table-cell;
+    width: 90%;
+    vertical-align: middle;
+}
+.top .search .search-form .submit{
+    display: table-cell;
+    width: 10%;
+    vertical-align: middle;
+}
+.top .search .search-form input[type="text"]{
+    width: 100%;
+    padding: 5px;
+    border: 1px #999 solid;
+    font-size: 16px;
+    line-height: 16px;
+    box-sizing:border-box;
+}
+
+.top .search .search-form input[type="submit"]{
+    margin: auto;
+    width: 100%;
+    height: 31px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #333;
+    border: 1px solid #333;
+    color: white;
+    float: none;
+}
+
+.top .search .search-form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #333 !important;
+    border: 1px #333 solid !important;
+}
+
+
+
+
+
+/* ------- SEARCH RESULTS ------- */
+.search-results{
+    padding:10px;
+    text-align: center;
+    box-sizing:border-box;
+    margin-top:10px;
+    border:1px #eee solid;
+}
+
+
+
+
+/* ------- RESULTS ------- */
+.results{
+    margin-bottom: 20px;
+}
+.results .num-results{
+    text-transform: uppercase;
+    background-color: #eee;
+    font-size: 15px;
+    display: table;
+    width: 100%;
+}
+.results .num-results span{
+    padding: 5px;
+    display: table-cell;
+    text-align: center;
+    border-right: 2px solid white;
+}
+.results .num-results span:last-child{
+    border-right: none;
+}
+
+.results .status{
+    padding: 5px;
+}
+.results .status .current{
+    font-weight: bold;
+}
+
+/* ----- RESULTS TABLE ----- */
+.results table{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+/* --- TABLE HEADER --- */
+.results table thead th{
+    background-color: #333;
+    color:white;
+    text-transform:uppercase;
+    text-align: center;
+}
+.results table th a{
+    color: white;
+}
+.results table th a:hover{
+    text-decoration: underline;
+}
+
+.results table th.featured,
+.results table th.visible{
+    width: 90px;
+}
+.results table th.sort{
+    width: 65px;
+}
+.results table th.date{
+    width: 100px;
+}
+.results table th.image{
+    width: 75px;
+}
+.results table th.actions{
+    min-width: 180px;
+    width: 10%;
+}
+.results table th.actions.short{
+    min-width: 0px;
+}
+.results table.orders th.actions{
+    max-width: 125px;
+}
+
+.results table th,
+.results table td{
+    padding:10px;
+    text-align: center;
+    font-weight: lighter;
+    vertical-align: middle;
+    font-size:14px;
+}
+/* TREE TABLE */
+.results table.tree{
+
+}
+.results table.tree .element{
+    text-align: left;
+}
+
+.results table th .sortable{
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url(../img/bkg/ordenable.png);
+}
+.results table th .desc{
+    background-image: url(../img/bkg/arrow_down.png);
+}
+.results table th .asc{
+    background-image: url(../img/bkg/arrow_up.png);
+}
+
+/* --- TABLE BODY --- */
+.results table tr{
+    transition: 0.2s all ease-out;
+    background-color: #eee;
+}
+.results table tr.pair{
+    background-color: #eee;
+}
+.results table tr.odd{
+    background-color: white;
+}
+.results table tr.alert{
+    background-color: #FEDB56;
+}
+.results table tr.bolder td{
+    font-weight: bold;
+}
+.results table tbody tr:hover{
+    background: #DDD;
+}
+.results table.questions_list tbody td.question_part,
+.results table.questions_list tbody td.question{
+    text-align: left;
+}
+.results table.questions_list tbody td.question_part{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.results table.questions_list tbody td.question{
+    padding-left: 80px;
+}
+
+/* -- CHECKS -- */
+.results table .check{
+    border: 1px solid #999;
+    background: white;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.results table .check img{
+    display: none;
+}
+.results table .check.checked img{
+    display: block;
+    width: 30px;
+    margin-top: -7px;
+    margin-left: -3px;
+    margin-bottom: -23px;
+}
+
+/* -- TABLE ACTIONS --*/
+.results table td.actions{
+
+}
+.results table .button{
+    font-size: 12px;
+    line-height: 12px;
+    height: auto;
+    margin: 0 2.5px 5px;
+    padding: 6.5px;
+    width: calc(50% - 5px);
+}
+.results table .button.fullwidth{
+    width: calc(100% - 5px);
+}
+.results table .button.more{
+    min-width: 0px;
+}
+.results table .button:hover{
+    background-color: #333 !important;
+}
+
+.results table span.draft {
+    color: #0065ff;
+    font-size: 1em;
+    text-transform: none;
+    margin-left: 20px;
+    position: absolute;
+}
+
+/* ----- SORTABLE ELEMENTS ----- */
+.results table tbody tr.sortable .handle{
+    cursor: move;
+    width: 65px;
+}
+.results table .sortable .handle:hover{
+    background-color: #888 !important;
+}
+.results table tbody tr.sortable.ui-sortable-helper{
+    background-color: #888 !important;
+    border: none;
+}
+.results table tbody tr.sortable.ui-sortable-helper td.visible{
+    width: 90px;
+}
+.results table tbody tr.sortable.ui-sortable-helper td.actions{
+    width: 10%;
+    min-width: 0px;
+}
+
+/* AJAX TABLE (DIV AS TABLES)*/
+.results .admin-table .th.actions,
+.results .admin-table .td.actions{
+    width: 70px;
+}
+.results .admin-table .tr,
+.results .admin-table form.ajax-form{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.results .admin-table .th,
+.results .admin-table .td{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px;
+}
+.results .admin-table input[class^="ico-"],
+a[class^="ico-"]{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.admin-table .ico-save{ background-image: url(../img/menus/save.png); }
+.admin-table .ico-edit{ background-image: url(../img/menus/edit.png); }
+.admin-table .ico-delete{ background-image: url(../img/menus/delete.png); }
+.results .admin-table .empty-message{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+/* ---- PAGINATOR ---- */
+.results .paginator {
+
+}
+.results .paginator span{
+    margin: 0px 10px;
+    color: #333;
+    border: 1px solid #333;
+    transition: all 0.2s ease-out;
+    display: block;
+    float: left;
+}
+.results .paginator span a{
+    display: block;
+    padding: 5px 10px;
+}
+.results .paginator span:hover{
+    background-color: #EEE;
+}
+.results .paginator span.current{
+    background-color: #333;
+    color: white;
+}
+.results .paginator span.current a{
+    color: white;
+}
+
+
+/* ------- FORMULARIOS ------- */
+.admin-form{
+    margin-bottom: 20px;
+}
+.admin-form .form-block{
+    margin-bottom: 40px;
+}
+.admin-form .form-block .col-left{
+    width: 48%;
+    float: left;
+}
+.admin-form .form-block .col-right{
+    width: 48%;
+    float: right;
+}
+
+.admin-form h3{
+    padding: 10px;
+    background: #EEE;
+    margin: 20px 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.admin-form h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* LABELS */
+.admin-form .input label{
+    text-align: right;
+    padding: 5px 15px 5px 0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+/* CHECKBOX */
+.admin-form .checkbox-form{
+    margin-top:7px;
+}
+
+.input.checkbox{
+    padding:5px;
+    width: 100%;
+}
+
+
+/*INPUT*/
+.admin-form .input {
+    clear:both;
+    margin-top:10px;
+}
+
+.admin-form .input-note{
+    margin-top:3px;
+    margin-bottom:10px;
+    background-color: white;
+    font-style: italic;
+    font-size:14px;
+}
+.admin-form .input-note a{
+    text-decoration: underline;
+}
+.admin-form .input-note a:hover{
+    text-decoration: none;
+}
+
+.admin-form textarea,
+.admin-form input[type="text"],
+.admin-form input[type="email"],
+.admin-form input[type="number"],
+.admin-form input[type="tel"],
+.admin-form input[type="password"],
+.admin-form select,
+.admin-form .input .cke{
+    padding: 5px;
+    border: 1px #777 solid;
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.admin-form input[type="checkbox"]{
+    margin: 7px;
+}
+.admin-form .input input[readonly]{
+    background: #EEE;
+}
+
+/* CKEDITOR */
+.admin-form .cke{
+    margin-right:0 !important;
+}
+
+.admin-form .cke,
+.admin-form.columna .cke,
+.admin-form.corto .cke{
+    margin-bottom: 20px;
+    padding:0 !important;
+    margin-right:10px;
+}
+
+
+
+/* IMAGES */
+
+.admin-form .media{
+    float: none;
+    width: 100%;
+}
+
+.admin-form .filename{
+    text-align: center;
+    border:1px #555 solid;
+}
+
+.admin-form .filename p{
+    padding:5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.admin-form .block-media{
+    padding: 10px;
+    box-sizing:border-box;
+    background-color: #eee;
+    width:100%;
+}
+.admin-form .block-media.companies{
+    width: 48%;
+    float: left;
+    margin-right: 20px;
+}
+
+.admin-form .block-media .delete{
+    text-align: center;
+    margin-bottom:10px;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: #999;
+}
+.admin-form .block-media .delete a{
+    color: white;
+}
+.admin-form .block-media .files{
+    text-align: center;
+    border: 1px #333 solid;
+    border-bottom: none;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: #666;
+    color: #fff;
+}
+.admin-form .block-media .files>a{
+    display: block;
+    padding: 5px;
+    color: #fff;
+}
+.admin-form .block-media .files:hover{
+    cursor: pointer;
+    background: #555;
+}
+.admin-form .block-media .delete a{
+    display: block;
+    padding:2px 5px;
+}
+
+.admin-form .block-media .delete:hover{
+    cursor: pointer;
+    background-color: #333 !important;
+    border-color: #333 !important;
+}
+.admin-form .block-media .delete:hover a{
+    color: white;
+}
+
+.admin-form .block-media h3{
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom:10px;
+    font-size: 13px;
+}
+
+/* EXTRA IMAGE */
+.extra-image{
+    margin-right:1%;
+    float: left;
+    box-sizing:border-box;
+
+}
+
+.extra-image img{
+    border: 1px #333 solid;
+    box-sizing:border-box;
+    width:100%;
+}
+
+.block-media .info-img{
+    text-align:center;
+}
+.main-image{
+    margin:0 auto;
+    border:3px solid white;
+    background-color: white;
+    border:1px #777 solid;
+    box-sizing: border-box;
+}
+
+
+/* FILES */
+.admin-form .input.file{
+    overflow: hidden;
+    position: relative;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background-color: #777;
+    border: 1px #777 solid;
+    margin-top:10px;
+    color:white;
+    cursor:pointer;
+    background-image: url(../img/bkg/upload.png);
+    background-position: right;
+    background-repeat:no-repeat;
+    box-sizing: border-box;
+    width: 100%;
+    transition: 0.2s all ease-out;
+}
+
+.admin-form .input.file label{
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.admin-form .input.file [type="file"]{
+    display:block;
+    opacity:0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor:pointer;
+}
+
+.admin-form label.imagen:hover,
+.admin-form .input.file:hover{
+    cursor:pointer;
+    background-color: #333 !important;
+    border-color: #333 !important;
+}
+
+
+/* ATTACH FILES */
+.admin-form .attach{
+    display: table;
+    width: 100%;
+}
+.admin-form .attach .file{
+    display: table-cell;
+    width: 90%;
+    border: 1px solid #333;
+    padding: 0 10px;
+}
+.admin-form .attach .file:hover{
+    background: #333;
+    color: white;
+}
+.admin-form .attach p.delete{
+    display: table-cell;
+    width: 10%;
+    text-align: center;
+    float: none;
+}
+.admin-form .attach p.delete a{
+    text-align: center;
+    color: white;
+}
+
+
+/* SUBMIT */
+.admin-form .button{
+    float: right;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+
+/* ADD MAP FORM */
+.admin-form .map{
+
+}
+.admin-form .map .map-columns{
+    display: table;
+}
+.admin-form .map .map-left{
+    display: table-cell;
+    width: 50%;
+}
+.admin-form .map .map-right{
+    display: table-cell;
+    width: 50%;
+    padding-left: 30px;
+}
+.admin-form .map .button{
+    float: right;
+    margin-right: 0;
+    margin-top: 20px;
+}
+.admin-form .map h4{
+    margin-bottom: 10px;
+}
+.admin-form .map .map-canvas{
+    width: 100%;
+    height: 400px;
+}
+
+
+
+
+/* VERSIONES */
+.version-available {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 2px #777;
+}
+.version-available p:first-child{
+    background: url(../img/menus/version.png) no-repeat left 5px center;
+    background-size: 25px;
+    padding: 5px 40px;
+}
+.version-available ul{
+    margin-left: 50px;
+    padding-left: 10px;
+    list-style-type: none;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 14px;
+    border-left: 5px solid #777;
+}
+.version-available ul li.last-version{
+    font-weight: bolder;
+}
+.version-available ul li a{
+    text-decoration: underline;
+    color: #0065ff;
+    margin: 5px;
+}
+
+/* ACCORDION */
+.accordion-title{
+    cursor: pointer;
+}
+
+
+
+/* CONTENT TABS */
+.content-tabs{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 5px solid;
+}
+.content-tabs .tab{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    text-align: center;
+    background: rgba(255,255,255,1);
+    color: black;
+    transition: 0.2s all ease-out;
+}
+.content-tabs .tab:hover{
+    background: rgba(255,255,255,0.5);
+}
+.content-tabs .tab.current{
+    background: none;
+    color: white;
+}
+
+
+/* LANGUAGES */
+.languages h3.default-title{
+    padding: 10px;
+    background: #EEE;
+    text-align: left;
+}
+
+
+
+
+/* SECTION PARTS */
+.section-parts{
+
+}
+.section-parts h2.sections-title{
+    background: #EEE;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.section-parts .add-part-buttons{
+    display: table;
+    width: 100%;
+}
+.section-parts .add-part-buttons .button{
+    display: table-cell;
+    float: none;
+    text-align: center;
+}
+
+
+/* FICHA DE ENTIDADES */
+.admin-view{
+    clear:both;
+}
+
+.admin-view h2{
+    text-align:center;
+    font-size:35px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color:black;
+    padding:10px;
+}
+.admin-view h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.admin-view .date{
+    text-align: center;
+    color:#999;
+    margin-bottom: 20px;
+}
+
+.admin-view .block-main img{
+    width:100%;
+}
+
+.admin-view .map{
+
+}
+.admin-view .map .map-canvas{
+    width: 100%;
+    height: 400px;
+}
+
+.admin-view .block-gallery .extra-image{
+    width:15%;
+}
+
+.admin-view .description{
+    width:100%;
+    font-size:15px;
+    margin-bottom: 20px;
+}
+
+.admin-view .description h3{
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 20px;
+    border-bottom: 1px solid;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.admin-view .description h4{
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-top: 19px;
+    text-transform: uppercase;
+}
+.admin-view .description a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.admin-view .description strong{
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-weight: bold;
+}
+
+.admin-view .description ul{
+    padding-left: 20px;
+    margin:20px;
+    list-style-type: square;
+}
+
+.admin-view .description p{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.admin-view .description ul li{
+    margin-bottom:5px;
+}
+
+.admin-view .descripcion-ficha .establishment{
+    border-top: 1px solid #777;
+}
+.admin-view .descripcion-ficha .establishment h3{
+    font-size: 18px;
+}
+.admin-view .descripcion-ficha .establishment p .boton-administrador{
+    width: 100%;
+    text-decoration: none;
+}
+
+.admin-view .columna-ficha{
+    float:left;
+    width:300px;
+    margin-top:10px;
+    text-align: center;
+}
+
+.admin-view .columna-ficha h3{
+    text-align: left;
+}
+
+.admin-view .dos-columnas{
+    font-size: 15px;
+}
+
+.admin-view table tr{
+    padding:5px !important;
+}
+
+.dos-columnas{
+    clear: both;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.dos-columnas .columna-izquierda,
+.dos-columnas .columna-derecha{
+    text-align: center;
+    background-color: #eee;
+    padding:20px;
+    width:440px;
+}
+
+.columna-izquierda .enlace-columnas,
+.columna-derecha .enlace-columnas{
+    text-decoration: underline;
+}
+
+.dos-columnas h2{
+    font-weight: lighter;
+    font-size:18px;
+}
+
+.dos-columnas .columna-izquierda{
+    float:left;
+    padding-right: 20px;
+}
+
+.dos-columnas .columna-derecha{
+    padding-left:20px;
+    float:right;
+}
+
+
+
+
+
+/* ADMINISTRACION DE PORTADA */
+.slides{
+    margin-top: 10px;
+}
+.slides .slide{
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.slides .slide .oculta{
+    opacity: 0.5;
+}
+.slides .slide .image{
+    float:left;
+    width: 20%;
+    box-sizing:border-box;
+}
+.slides .slide .caption,
+.slides .slide .description
+{
+    float:right;
+    width: 80%;
+    text-align: right;
+    box-sizing:border-box;
+}
+
+.slides .slide .botones{
+
+}
+.slides .slide .botones .boton-administrador{
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+
+
+
+
+
+
+
+/* ------- ADMINISTRACIÓN DE PEDIDOS ------- */
+.order{
+
+}
+.order header{
+    margin-bottom: 20px;
+}
+
+.order header .content-header{
+    display: table;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.order header h3{
+    display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+.order header h3.order-ref{
+    width: 30%;
+}
+.order header h3.order-ref .ref{
+    font-size: 40px;
+}
+.order header h3.order-status{
+    width: 30%;
+}
+.order header h3.order-status .name{
+    font-size: 25px;
+}
+.order header h3.order-date{
+    width: 20%;
+}
+.order header h3.order-total{
+    width: 20%;
+}
+.order header h3.order-total .price{
+    font-size: 40px;
+}
+
+.order .details{
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.order .details h4{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.order .details .user{
+    display: table-cell;
+    vertical-align: top;
+    width: 33%;
+    background-color: #EEE;
+    padding: 20px;
+    border-right: 10px solid white;
+}
+.order .details .payment{
+    display: table-cell;
+    vertical-align: top;
+    width: 33%;
+    background-color: #EEE;
+    padding: 20px;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+}
+.order .details .payment .data{
+    float: left;
+    width: 50%;
+}
+.order .details .payment .data .date{
+    margin-bottom: 10px;
+}
+.order .details .payment .data .price span{
+    font-size: 30px;
+}
+.order .details .payment .icon{
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+.order .details .payment .icon img{
+    width: 100px;
+}
+.order .details .address{
+    display: table-cell;
+    vertical-align: top;
+    width: 33%;
+    background-color: #EEE;
+    padding: 20px;
+    border-left: 10px solid white;
+}
+.order .details .fullname{
+    font-size: 18px;
+}
+.order .details .phone{
+    margin-bottom: 10px;
+}
+
+.order .items{
+    margin-bottom: 20px;
+}
+.order .items td{
+    font-size: 16px;
+}
+.order .items td span{
+    display: block;
+}
+.order .items td span.old-price{
+    text-decoration: line-through;
+}
+.order .items td span.discount-price{
+    color: red;
+}
+.order .items .item{
+
+}
+.order .items .item span{
+    display: block;
+}
+
+.order .items .products{
+    background-color: #999;
+    color: white;
+}
+.order .items .products td[colspan]{
+    text-align: right;
+}
+
+.order .items .vat{
+    background-color: #777;
+    color: white;
+}
+
+.order .items .shipment{
+    background-color: #555;
+    color: white;
+}
+.order .items .shipment td[colspan]{
+    text-align: right;
+}
+.order .items .products span.old-price,
+.order .items .shipment span.old-price{
+    color: #DDD;
+}
+.order .items .products span.discount-price,
+.order .items .shipment span.discount-price{
+    color: #FFF;
+}
+
+.order .items .total{
+    background-color: #333;
+    color: white;
+}
+.order .items .total td{
+    font-size: 30px;
+}
+.order .items .total td[colspan]{
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.order .statuses{
+
+}
+.order .statuses .date{
+    width: 100px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+.order .statuses .name{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 20px;
+    background-color: #DDD;
+}
+.order .statuses .comments{
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 10px 20px;
+    background-color: #EEE;
+}

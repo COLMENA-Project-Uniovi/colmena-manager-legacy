@@ -1,0 +1,348 @@
+.web-content{
+	margin-top:20px;
+}
+
+.web-content .content *{
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+/* COLORS */
+
+.content{
+	clear: both;
+}
+
+.content .part{
+	padding: 10px 10px 20px 10px;
+	font-size: 14px;
+}
+.content .part h3{
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 22px;
+	column-span:all;
+	-webkit-column-span:all; /* Safari and Chrome */
+}
+.content .part h4{
+	font-size: 16px;
+	color: #003470;
+}
+.content .part img{
+	vertical-align: middle;
+}
+
+.content .part p{
+	margin-bottom: 10px;
+}
+
+.content .part ul{
+	margin-left: 10px;
+	padding-left: 10px;
+	list-style-type: none;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size: 14px;
+	border-left: 5px solid #003470;
+}
+
+.content .part ul li{
+	margin-top:5px;
+}
+
+.content .part ol {
+	counter-reset:li; /* Initiate a counter */
+	list-style: none; /* Disable the normal item numbering */
+	margin-left: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	display: table;
+}
+.content .part ol > li {
+	position: relative; /* Create a positioning context */
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+.content .part ol > li:before {
+	content: counter(li); /* Use the counter as content */
+	counter-increment: li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position: absolute;
+	left: -25px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 25px;
+	height: 25px;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	padding: 3px;
+	border-radius: 30px;
+	background-color: #003470;
+	color: white;
+	text-align: center;
+	font-weight: bolder;
+}
+.content .part li ol,
+.content .part li ul {margin-top:6px;}
+.content .part ol ol li:last-child {margin-bottom:0;}
+
+.content .part a{
+	font-weight: 600;
+	text-decoration: none;
+	color: #003470;
+}
+.content .part a:hover{
+	text-decoration: underline;
+}
+
+.content .part.textimage img{
+	margin-bottom: 10px;
+}
+.content .part.textimage img.center{
+	display: block;
+	margin: 0 auto 10px;
+}
+.content .part.textimage img.left{
+	float: left;
+	margin-right: 10px;
+}
+.content .part.textimage img.right{
+	float: right;
+	margin-left: 10px;
+}
+
+
+.parts{
+	margin: 20px 0;
+}
+.part{
+	margin-bottom: 20px;
+	border-bottom: solid 1px #003470;
+	padding-bottom: 20px;
+}
+.part:last-child{
+	border-bottom: none;
+}
+.part h3{
+	margin-bottom: 10px;
+}
+.part p{
+	margin-bottom: 10px;
+}
+	/* FEATURED */
+.content .part.featured{
+	display: block;
+	width: 100%;
+}
+
+.content .part.featured .featured-content{
+	padding: 30px 100px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	height: 175px;
+	text-align: center;
+}
+.content .part.featured .featured-content p{
+	color: #003470;
+	font-size: 40px;
+	line-height: 1.2em;
+	text-transform: uppercase;
+	font-weight: lighter;
+	margin: 0;
+}
+.content .part.featured .featured-content p.line1{
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #003470;
+}
+
+
+.content .part.gallery{
+
+}
+.content .part.gallery .images{
+
+}
+.content .part.gallery .images .image{
+	position: relative;
+	float: left;
+	margin: 5px;
+	transition: 0.2s all ease-out;
+	cursor: pointer;
+	width: 204px;
+	height: 204px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+}
+.content .part.gallery .images .image .glass{
+	position: absolute;
+	width: 204px;
+	height: 204px;
+	background: url(../img/menus/glass.png) right bottom -30px no-repeat;
+	background-size: 20px 20px;
+	top: 0;
+	transition: 0.5s all ease-out;
+	opacity: 0;
+}
+.content .part.gallery .images .image:hover .glass{
+	background: rgba(194, 150, 100, 0.6) url(../img/menus/glass.png) right 20px bottom 20px no-repeat;
+	background-size: 20px 20px;
+	opacity: 1;
+}
+.content .part.gallery .images .image img{
+	transform: scale(1,1);
+	transition: 0.5s all ease-out;
+}
+.content .part.gallery .images .image:hover img{
+	transform: scale(1.2,1.2);
+}
+
+.content .part.tabs{
+
+}
+.content .part.tabs .header-tabs{
+	display: table;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.content .part.tabs .header-tabs .tab{
+	display: table-cell;
+	text-align: center;
+	background: #EEE;
+	padding: 10px;
+	cursor: pointer;
+	transition: 0.2s all ease-out;
+}
+.content .part.tabs .header-tabs .tab:hover{
+	background-color: rgba(0,52,112, 0.2);
+}
+.content .part.tabs .header-tabs .tab.current{
+	color: white;
+	background: #003470;
+}
+.content .part.tabs .content-tabs .tab{
+	display: none;
+}
+
+.content .part.downloads{
+
+}
+.content .part.downloads .download{
+	display: table;
+	width: 468px;
+	height: 80px;
+	margin-bottom: 10px;
+	background: url(../img/menus/download.png) right 20px center no-repeat;
+	background-size: 50px 50px;
+	transition: 0.2s all ease-out;
+}
+.content .part.downloads .download.link{
+	background: url(../img/menus/link.png) right 20px center no-repeat;
+	background-size: 40px 40px;
+}
+.content .part.downloads .download:hover{
+	background-position: right 20px bottom 5px;
+}
+.content .part.downloads .download.odd{
+	float: left;
+}
+.content .part.downloads .download.pair{
+	float: right;
+}
+
+.content .part.downloads .download a{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 10px 100px 10px 10px;
+	color: white;
+	font-weight: 100;
+	font-size: 14px;
+}
+.content .part.downloads .download a:hover{
+	text-decoration: none;
+}
+
+
+
+
+	/* TABLES */
+.content .part table{
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.content .part table p{
+	margin-bottom: 5px;
+}
+.content .part table thead th{
+	background: #333;
+	color: white;
+	padding: 10px;
+	font-weight: lighter;
+	font-size: 20px;
+}
+
+.content .part table tbody td{
+	padding: 5px;
+	font-size: 14px;
+}
+.content .part table tbody tr.odd{
+	background: #EEE;
+	transition: 0.2s all ease-out;
+}
+.content .part table tbody .name{
+	text-align: left;
+	width: 50%;
+}
+.content .part table tbody .subject{
+	text-align: left;
+	width: 70%;
+}
+
+.content .part table tfoot tr{
+	color: white;
+}
+.content .part table tfoot tr td{
+	padding: 5px;
+}
+
+
+
+
+.content .part:hover{
+	background: #EEE;
+}
+.content .part .actions{
+	height: 0px;
+	overflow: hidden;
+	transition: 0.2s all ease-out;
+}
+.content .part:hover .actions{
+	height: 32px;
+}
+.content .part .actions .button{
+	padding: 6.5px 10px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 15px;
+	background-color: #555;
+	border: 1px solid #333;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	float: right;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.content .product{
+	text-align: center;
+}

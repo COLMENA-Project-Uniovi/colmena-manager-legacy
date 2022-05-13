@@ -1,0 +1,664 @@
+2017-06-08 00:33:06 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'colmena_portal\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /admin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(3288): ConnectionManager::getDataSource('default')
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(3310): Model->setSource('admin_users')
+#5 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#6 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/Helper/FormHelper.php(199): Model->schema()
+#7 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/Helper/FormHelper.php(451): FormHelper->_introspectModel('User', 'fields')
+#8 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Users/login.ctp(20): FormHelper->create('User', Array)
+#9 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/View.php(931): include('/var/www/vhosts...')
+#10 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/View.php(893): View->_evaluate('/var/www/vhosts...', Array)
+#11 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/View.php(462): View->_render('/var/www/vhosts...')
+#12 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#13 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#14 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2017-06-08 00:33:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-03-08 00:35:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-03-08 00:36:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-03-08 00:38:23 Error: [MissingTableException] Table colmena_group for model ColmenaGroup was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'colmena_group',
+  'class' => 'ColmenaGroup',
+  'ds' => 'default',
+)
+Request URL: /admin/colmena_groups/index/8
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(3310): Model->setSource('colmena_group')
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1401): Model->schema()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(398): Model->hasField('subject_id')
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(ColmenaGroup), Array, Array)
+#5 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/Controller/ColmenaGroupsController.php(30): PaginatorComponent->paginate(NULL)
+#6 [internal function]: ColmenaGroupsController->index('8')
+#7 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ColmenaGroupsController), Array)
+#8 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaGroupsController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-03-08 00:38:25 Error: [MissingTableException] Table colmena_group for model ColmenaGroup was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'colmena_group',
+  'class' => 'ColmenaGroup',
+  'ds' => 'default',
+)
+Request URL: /admin/colmena_groups/index/8
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(3310): Model->setSource('colmena_group')
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1401): Model->schema()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(398): Model->hasField('subject_id')
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(ColmenaGroup), Array, Array)
+#5 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/Controller/ColmenaGroupsController.php(30): PaginatorComponent->paginate(NULL)
+#6 [internal function]: ColmenaGroupsController->index('8')
+#7 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ColmenaGroupsController), Array)
+#8 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaGroupsController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-03-08 00:39:23 Error: [MissingTableException] Table colmena_compilations for model ColmenaCompilation was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'colmena_compilations',
+  'class' => 'ColmenaCompilation',
+  'ds' => 'default',
+)
+Request URL: /admin/colmena_compilations
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(3310): Model->setSource('colmena_compila...')
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1401): Model->schema()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(398): Model->hasField('visible')
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(ColmenaCompilation), Array, Array)
+#5 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/Controller/ColmenaCompilationsController.php(41): PaginatorComponent->paginate(NULL)
+#6 [internal function]: ColmenaCompilationsController->index()
+#7 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ColmenaCompilationsController), Array)
+#8 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaCompilationsController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-03-08 00:40:56 Error: [MissingTableException] Table colmena_session_group for model ColmenaSessionGroup was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'colmena_session_group',
+  'class' => 'ColmenaSessionGroup',
+  'ds' => 'default',
+)
+Request URL: /admin/ColmenaSessionGroups/index/8
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(3310): Model->setSource('colmena_session...')
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Model/Model.php(1401): Model->schema()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(398): Model->hasField('week')
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(ColmenaSessionGroup), Array, Array)
+#5 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/Controller/ColmenaSessionGroupsController.php(30): PaginatorComponent->paginate(NULL)
+#6 [internal function]: ColmenaSessionGroupsController->index('8')
+#7 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ColmenaSessionGroupsController), Array)
+#8 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaSessionGroupsController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-03-08 00:41:28 Error: [MissingViewException] View file "/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp',
+)
+Request URL: /admin/ColmenaSessionGroups/index/8
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaSessionGroupsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-03-08 00:41:33 Error: [MissingViewException] View file "/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp',
+)
+Request URL: /admin/ColmenaSessionGroups/index/8
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaSessionGroupsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-03-08 00:41:42 Error: [MissingViewException] View file "/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp',
+)
+Request URL: /admin/ColmenaSessionGroups/index/8
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaSessionGroupsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-03-08 00:43:09 Error: [MissingViewException] View file "/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/vhosts/colmenaproject.es/httpdocs/admin/app/View/Section/ColmenaSessionGroups/index.ctp',
+)
+Request URL: /admin/ColmenaSessionGroups/index/8
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ColmenaSessionGroupsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-03-19 11:03:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-05-23 17:25:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-09-19 23:29:38 Error: [MissingControllerException] Controller class FCKeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FCKeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/FCKeditor/editor/filemanager/connectors/uploadtest.html
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-09-19 23:29:40 Error: [MissingControllerException] Controller class EditorController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/editor/filemanager/connectors/uploadtest.html
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-09-19 23:29:40 Error: [MissingControllerException] Controller class EditorController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/editor/editor/filemanager/connectors/uploadtest.html
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-01 07:30:47 Error: [MissingControllerException] Controller class ScriptsController could not be found.
+Exception Attributes: array (
+  'class' => 'ScriptsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/scripts/setup.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-04 03:41:48 Error: [MissingControllerException] Controller class ScriptsController could not be found.
+Exception Attributes: array (
+  'class' => 'ScriptsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/scripts/setup.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-04 12:46:14 Error: [MissingControllerException] Controller class ScriptsController could not be found.
+Exception Attributes: array (
+  'class' => 'ScriptsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/scripts/setup.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-16 08:38:37 Error: [MissingControllerException] Controller class ScriptsController could not be found.
+Exception Attributes: array (
+  'class' => 'ScriptsController',
+  'plugin' => NULL,
+)
+Request URL: /admin/scripts/setup.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-03-28 13:46:19 Error: [MissingControllerException] Controller class FckeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FckeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php?Command=GetFoldersAndFiles&Type=File&CurrentFolder=%2F
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-03-28 13:46:19 Error: [MissingControllerException] Controller class FCKeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FCKeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/FCKeditor/editor/filemanager/browser/default/connectors/php/connector.php?Command=GetFoldersAndFiles&Type=File&CurrentFolder=%2F
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-04-24 17:36:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-08-03 13:56:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-12 15:12:45 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /admin/kcfinder//browse.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-09-29 18:00:18 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /admin/kcfinder//browse.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-10-02 00:58:58 Error: [MissingControllerException] Controller class .envController could not be found.
+Exception Attributes: array (
+  'class' => '.envController',
+  'plugin' => NULL,
+)
+Request URL: /admin/.env
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2020-12-10 23:28:38 Error: [MissingControllerException] Controller class .envController could not be found.
+Exception Attributes: array (
+  'class' => '.envController',
+  'plugin' => NULL,
+)
+Request URL: /admin/.env
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 04:47:19 Error: [MissingControllerException] Controller class CkeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'CkeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/ckeditor/kcfinder/browse.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-01-21 04:47:19 Error: [MissingControllerException] Controller class KcfinderController could not be found.
+Exception Attributes: array (
+  'class' => 'KcfinderController',
+  'plugin' => NULL,
+)
+Request URL: /admin/kcfinder/browse.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-04-20 20:28:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-04-30 10:02:15 Error: [MissingControllerException] Controller class DumperController could not be found.
+Exception Attributes: array (
+  'class' => 'DumperController',
+  'plugin' => NULL,
+)
+Request URL: /admin/dumper/sxd.js
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-04-30 10:02:16 Error: [MissingControllerException] Controller class SxdController could not be found.
+Exception Attributes: array (
+  'class' => 'SxdController',
+  'plugin' => NULL,
+)
+Request URL: /admin/sxd/sxd.js
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-05-26 16:32:00 Error: [MissingControllerException] Controller class FCKeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FCKeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/FCKeditor/editor/filemanager/upload/php/upload.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-05-28 13:40:18 Error: [MissingControllerException] Controller class Dumper.phpController could not be found.
+Exception Attributes: array (
+  'class' => 'Dumper.phpController',
+  'plugin' => NULL,
+)
+Request URL: /admin/dumper.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-06-05 11:58:37 Error: [MissingControllerException] Controller class FilemanController could not be found.
+Exception Attributes: array (
+  'class' => 'FilemanController',
+  'plugin' => NULL,
+)
+Request URL: /admin/fileman/php/upload.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-06-07 01:24:23 Error: [MissingControllerException] Controller class FCKeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FCKeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/FCKeditor/editor/filemanager/upload/php/upload.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-06-07 23:58:05 Error: [MissingControllerException] Controller class FckeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FckeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/fckeditor/editor/filemanager/upload/php/upload.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-06-10 02:50:22 Error: [MissingControllerException] Controller class FCKeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FCKeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/FCKeditor/editor/filemanager/browser/default/connectors/php/connector.php?Command=GetFoldersAndFiles&Type=File&CurrentFolder=%2F
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-06-10 21:02:21 Error: [MissingControllerException] Controller class FckeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FckeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php?Command=GetFoldersAndFiles&Type=File&CurrentFolder=%2F
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-07-02 15:44:46 Error: [MissingControllerException] Controller class EditorController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/editor/editor/filemanager/upload/php/upload.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-07-02 19:04:44 Error: [MissingControllerException] Controller class EditorController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/editor/filemanager/upload/php/upload.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-07-03 16:04:38 Error: [MissingControllerException] Controller class EditorController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/editor/filemanager/browser/default/connectors/php/connector.php?Command=GetFoldersAndFiles&Type=File&CurrentFolder=%252F
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-07-03 20:51:05 Error: [MissingControllerException] Controller class EditorController could not be found.
+Exception Attributes: array (
+  'class' => 'EditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/editor/editor/filemanager/browser/default/connectors/php/connector.php?Command=GetFoldersAndFiles&Type=File&CurrentFolder=%252F
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-07-12 20:11:19 Error: [MissingControllerException] Controller class .envController could not be found.
+Exception Attributes: array (
+  'class' => '.envController',
+  'plugin' => NULL,
+)
+Request URL: /admin/.env
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-08-13 18:31:56 Error: [MissingControllerException] Controller class .envController could not be found.
+Exception Attributes: array (
+  'class' => '.envController',
+  'plugin' => NULL,
+)
+Request URL: /admin/.env
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-10-11 12:49:44 Error: [MissingControllerException] Controller class FckeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'FckeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/fckeditor/editor/filemanager/connectors/test.html
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-12-11 13:28:49 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-12-11 15:14:04 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-12-11 17:10:58 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-12-11 19:03:05 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-12-11 20:36:36 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-12-11 23:49:05 Error: [MissingControllerException] Controller class ViewController could not be found.
+Exception Attributes: array (
+  'class' => 'ViewController',
+  'plugin' => NULL,
+)
+Request URL: /admin/view/stylesheet/accesson.php
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-12-14 21:08:57 Error: [MissingControllerException] Controller class .envController could not be found.
+Exception Attributes: array (
+  'class' => '.envController',
+  'plugin' => NULL,
+)
+Request URL: /admin/.env
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2021-12-22 00:58:46 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-12-22 02:19:47 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2021-12-22 03:41:10 Error: [MissingActionException] Action UsersController::loginadmin() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'loginadmin',
+)
+Request URL: /admin/users/loginadmin/users/login
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/vhosts/colmenaproject.es/httpdocs/admin/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-02-03 15:57:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/favicon.png
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-02-25 06:32:22 Error: [MissingControllerException] Controller class CkeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'CkeditorController',
+  'plugin' => NULL,
+)
+Request URL: /admin/ckeditor/kcfinder/js/helper.js
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-02-25 06:32:22 Error: [MissingControllerException] Controller class KcfinderController could not be found.
+Exception Attributes: array (
+  'class' => 'KcfinderController',
+  'plugin' => NULL,
+)
+Request URL: /admin/kcfinder/js/helper.js
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-03-18 19:54:58 Error: [MissingControllerException] Controller class ControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'ControllerController',
+  'plugin' => NULL,
+)
+Request URL: /admin/controller/extension/extension/ALFA_DATA
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-03-18 19:54:58 Error: [MissingControllerException] Controller class ControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'ControllerController',
+  'plugin' => NULL,
+)
+Request URL: /admin/controller/extension/extension/alfacgiapi
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-03-18 19:54:59 Error: [MissingControllerException] Controller class ControllerController could not be found.
+Exception Attributes: array (
+  'class' => 'ControllerController',
+  'plugin' => NULL,
+)
+Request URL: /admin/controller/extension/extension/cgialfa
+Stack Trace:
+#0 /var/www/vhosts/colmenaproject.es/httpdocs/admin/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

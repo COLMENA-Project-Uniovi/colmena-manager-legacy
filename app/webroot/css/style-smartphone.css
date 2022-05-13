@@ -1,0 +1,139 @@
+@media screen and (max-width: 720px){
+	.content-bloques .bloque.normal{
+		width: calc(100% - 20px);
+		float: none;
+	}
+
+	#flow-content{
+		padding:10px;
+		padding-left:60px;
+	}
+
+	nav .close-nav.hidden{
+		margin-right:-50px;
+		transition:0.5s all ease-out;
+	}
+
+	nav .close-nav.no-hidden{
+		width:70px;
+		height:70px;
+	}
+
+	nav .close-nav,
+	nav .logout{
+		width:50px;
+		height:50px;
+	}
+	nav .logout{
+		margin-right: -50px;
+		margin-top: 50px;
+		background-color: #444;
+	}
+
+	nav .close-nav img,
+	nav .logout img{
+		width: 30px;
+		float: right;
+		margin: 10px;
+	}
+
+	nav .close-nav.no-hidden img{
+		width:50px;
+	}
+
+
+	.header .actions{
+		float: none;
+	}
+
+	.breadcrumbs{
+		margin-bottom:10px;
+	}
+
+	.header .button{
+		float: none;
+		clear: both;
+		text-align: center;
+		margin-left:0;
+		margin-right: 0;
+		margin-bottom:10px;
+	}
+
+	.header .search{
+		margin-bottom: 0;
+	}
+
+	.header .search-form{
+		width: 100%;
+	}
+
+	.admin-table th,
+	.admin-table tr td{
+		display: none;
+	}
+
+	.admin-table .show-responsive{
+		display: block;
+	}
+
+	.admin-table .check{
+		margin-left:15px;
+		padding-top:4px;
+	}
+
+	.admin-table .check.checked {
+		text-align: left;
+	}
+
+	.admin-table .show-responsive.featured,
+	.admin-table .show-responsive.visible
+	{
+		padding:0;
+		float: left;
+		width:50%;
+	}
+
+	.admin-table .show-responsive.featured .check::after{
+	 	content:"Destacado";
+	 	margin-left:35px;
+	}
+	.admin-table .show-responsive.visible .check::after{
+		content:"Visible";
+	 	margin-left:35px;
+	}
+
+	.admin-table td.actions{
+		width: 100%;
+		clear: both;
+	}
+
+	.admin-table .button,
+	.admin-table .button a{
+		width: 100% !important;
+		float: none;
+	}
+
+	.entity-admin h2{
+		font-size:25px;
+	}
+
+	.admin-form .map .map-left{
+		display: table-row;
+		width: 100%;
+	}
+	.admin-form .map .button{
+		margin-bottom: 20px;
+	}
+	.admin-form .map .map-right{
+		display: table-row;
+		width: 100%;
+		padding-left: 0px;
+	}
+
+	.admin-form input[type="submit"]{
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+
+}

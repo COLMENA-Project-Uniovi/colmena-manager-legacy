@@ -1,0 +1,741 @@
+@charset "utf-8";
+
+/* GENERALES */
+* {
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-image: url(../img/bkg/diamond.png);
+	font-family: "myriad_prolight", sans-serif;
+	background-color: white;	
+}
+
+html, body, #container{
+	min-height:100%;
+	height:100%;
+	box-sizing:border-box;
+}
+
+.logo-print{
+	display: block;
+	width:500px;
+	margin:0 auto;
+}
+
+.logo-print-img{
+	width:500px;
+}
+
+#container{
+	background-image: url(../img/menus/logo-bkg.png);	
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-position:center;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+/* NAVIGATION */
+
+nav{
+	display:none;
+}
+
+nav .content-nav{
+	color: white;	
+}
+
+.close-nav,
+.logout{
+	margin-right:-70px;
+	float:right;
+	width:70px;
+	height:70px;
+	background-color:#333;
+	float:right;
+}
+
+.logout{
+	margin-top:70px;
+	background-color: #444;
+}
+
+
+.close-nav:hover,
+.logout:hover{
+	cursor:pointer;
+}
+
+.close-nav img,
+.logout img{
+	width:50px;
+	float:right;
+	margin:10px;
+}
+
+.logo-carezza{
+	width:180px;
+	float:left;
+	background-color: #222;
+	height:50px;
+	padding:10px 25px;
+}
+
+.logo-carezza .content-logo{
+	width:180px;
+	margin:0 auto;
+}
+
+.logo-carezza img{
+	width:180px;
+	margin-top: -15px;
+}
+
+.menu-desplegable{
+	border-top:1px #333 solid;
+
+}
+
+.elemento-menu{	
+	text-transform: uppercase;
+	
+}
+
+.elemento-menu a{
+	border-top:1px #111 solid;
+	padding:10px 20px;
+	color:white;
+	text-decoration: none;
+	font-weight:lighter;
+	display:block;
+	background-color: rgba(34,34,34,0.5);
+	border-bottom:1px #333 solid;
+	letter-spacing:2px;
+	text-align: right;
+}
+
+.elemento-menu a:hover,
+.elemento-menu.activo{
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+.logout-min{
+	height:13px;
+	margin-top:5px;
+}
+
+.clearboth{
+	clear:both;
+}
+
+/* FLOW CONTENT */
+
+#flow-content{
+	float:left;
+	width:1024px;
+	padding:20px;
+	margin-left:0px;
+	box-sizing:border-box;
+	background-color: rgba(255,255,255, 0.8);
+
+}
+
+.content-bloques .bloque{
+	background-color: white;
+	width:481px;
+}
+
+.content-bloques .bloque.normal{
+	height:200px;
+	margin-top:20px;
+	float:left;
+}
+
+.content-bloques .bloque.margin-right{
+	margin-right:20px;
+}
+
+.content-bloques .bloque.ancho{
+	width:100%;
+	box-sizing:border-box;
+	height:200px;
+}
+
+.content-bloques .titulo{
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	margin:0 auto;
+	width:80%;
+	padding:20px 0;
+	border-top: 1px #aaa solid;
+	border-bottom: 1px #aaa solid;
+}
+
+/* LISTADOS */
+
+.tabla-administrador{
+	width:100%;
+	border-collapse: collapse;
+	margin-top:20px;
+}
+
+.tabla-administrador .con-imagen{
+	width:50px;
+}
+
+.tabla-administrador .imagen-tabla{
+	width:50px;
+	float:left;
+	height:50px;
+	margin-right: 10px;
+	border: 1px #aaa solid;
+	background-color: white;
+
+}
+
+.tabla-administrador .imagen-tabla.margen{
+	margin-left: 20px;
+}
+
+.tabla-administrador .enlace-imagen.borde{
+	border-right: 1px #CCC solid;
+}
+
+.tabla-administrador tr.par{
+	background-color: #eee;
+}
+
+.tabla-administrador tr.impar{
+	background-color: white;
+}
+
+.tabla-administrador thead th{
+	background-color: #333;
+	color:white;
+	text-transform:uppercase;
+}
+
+.tabla-administrador th a{
+	color:white;
+}
+
+.tabla-administrador th .ordenable{
+	padding-right:30px;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-image: url(../img/bkg/ordenable.png);
+}
+
+.tabla-administrador th .desc{
+	background-image: url(../img/bkg/arrow_down.png);
+}
+
+.tabla-administrador th .asc{
+	background-image: url(../img/bkg/arrow_up.png);
+}
+
+.tabla-administrador th a:hover{
+}
+
+.tabla-administrador td,
+.tabla-administrador th{
+	padding:10px;	
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.tabla-administrador .boton-operaciones{
+	color: black;
+	text-decoration: none;
+	padding: 5px 10px 4px 10px;
+	background-color: #555;
+	color:white;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+.tabla-administrador .boton-operaciones-segunda-linea{
+	color: black;
+	text-decoration: none;
+	padding: 5px 15px;
+	text-transform: lowercase;
+	font-size: 13px;
+	margin-top:10px;
+	letter-spacing: 0px;
+}
+
+.tabla-administrador .boton-operaciones-segunda-linea:hover{
+	color:#555;	
+}
+
+.tabla-administrador .nombre a{
+	color: black;
+	padding:0;
+	background-color: transparent;
+	text-transform: default;
+}
+
+
+.tabla-administrador td.operaciones{
+	width:180px;
+	font-size:15px;
+}
+
+.cuadro-sobre-tabla{
+	clear:both;
+	margin-top:10px;
+}
+
+.cuadro-despues-tabla{
+	margin-top:40px;
+}
+
+.boton-administrador{
+	padding:5px 10px;
+	background-color: #555;
+	display:block;
+	text-decoration: none;
+	color:white;
+	float:left;
+	margin-right: 10px;
+	display: none;
+}
+
+.boton-administrador.derecha{
+	float:right;
+	margin-top:10px;
+}
+
+.boton-administrador.icono{
+	padding-right:35px;
+	background-image: url(../img/bkg/print.png);
+	background-position:right;
+	background-repeat: no-repeat;
+}
+
+
+.migas-de-pan{
+	display: none;
+	float:left;
+	font-family: 'myriad_prolight';
+	text-transform: uppercase;
+	padding:5px;
+	margin-top:10px;
+	background-color: #eee;
+}
+
+.titulo-administrador{
+	text-align: left;
+	font-family: 'myriad_prolight';
+	font-size:40px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
+
+.cuadro-flotante-titulo-busqueda{
+	clear:both;
+	float:left;
+	width:550px;
+	padding-top: 5px;
+}
+
+.subtitulo-administrador{
+	text-align: left;
+	font-family: 'myriad_prolight';
+	font-size:20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.subtitulo-administrador-cabecera{
+	text-align: center;
+	font-family: 'myriad_prolight';
+	font-size:35px;
+	margin-top:25px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.resultados-busqueda{
+	font-size: 17px;
+	letter-spacing: 1px;
+}
+
+.resultados-busqueda.salto{
+	clear: both;
+	padding:5px;
+}
+
+/* FICHA */
+
+
+.ficha-entidad-administrador{
+	clear:both;
+	margin-top:10px;
+	padding-top:10px;
+	padding-bottom: 20px;
+
+}
+
+.ficha-entidad-administrador .titulo-administrador{
+	text-align:center;
+	float:none;
+}
+
+.ficha-entidad-administrador h3{
+	font-weight: lighter;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+
+.formulario-ficha{
+	float:right;
+	width:670px;
+}
+
+.imagen-ficha{
+	float:left;
+	width:300px;
+}
+
+.content-image .info-img{
+	text-align:center;
+}
+
+.ficha-entidad-administrador .descripcion-ficha{
+	clear:both;
+	margin-top: 20px;
+	float:right;
+	width:640px;
+	padding-right: 20px;
+	font-size:16px;
+}
+
+.ficha-entidad-administrador .descripcion-ficha p{
+	margin-bottom:5px;
+}
+
+.ficha-entidad-administrador .descripcion-ficha ul{
+	margin-left:40px;
+	margin-top: 10px;
+	list-style-type: square;
+	font-size:15px;s
+}
+
+
+.ficha-entidad-administrador .descripcion-ficha ul li{
+	margin-bottom:5px;
+}
+
+
+.ficha-entidad-administrador .descripcion-ficha strong{
+	font-weight: bold;
+}
+
+.ficha-entidad-administrador .columna-ficha{
+	float:left;
+	width:300px;
+	margin-top:10px;
+	text-align: center;
+}
+
+.ficha-entidad-administrador .dos-columnas,
+.ficha-edicion-administrador .dos-columnas{
+	font-size: 15px;
+
+}
+
+.ficha-entidad-administrador table tr{
+	padding:5px !important;
+}
+
+.ficha-edicion-administrador{
+	margin-top: 20px;
+}
+
+.columna-ficha .direccion{
+	font-size:15px;
+
+}
+
+.dos-columnas{
+	padding-top: 20px;
+	margin-top: 20px;
+}
+
+.dos-columnas .columna-izquierda,
+.dos-columnas .columna-derecha{
+	text-align: center;
+	background-color: #eee;
+	padding:20px;
+	width:440px;
+}
+
+.dos-columnas h2{
+	font-weight: lighter;
+	font-size:18px;
+}
+
+.dos-columnas .columna-izquierda{
+	float:left;
+	padding-right: 20px;
+}
+
+.dos-columnas .columna-derecha{
+	padding-left:20px;
+	float:right;
+}
+
+.imagen-proveedor{
+	padding:4px;
+	margin:10px auto;
+	border:3px solid white;
+	background-color: white;
+	border:1px #777 solid;
+}
+
+/*FORMULARIOS*/
+
+.form-administrador{
+	margin-top:20px;
+	width:820px;
+}
+
+.form-administrador.columna{
+	width:440px;
+}
+
+.form-administrador.corto{
+	width:984px;
+}
+
+
+.form-administrador .input label{
+	float:left;
+	width:150px;
+	text-align:right;
+	padding:5px;
+	margin-right:20px;
+	text-transform: uppercase;
+}
+
+.form-administrador.columna .input label,
+.form-administrador.corto .input label{
+	width:100px;
+}
+
+.form-administrador.corto .input label.imagen{
+	width:250px;
+	margin-right:0;
+	text-align: center;
+}
+
+.input label.imagen-add{
+	width:820px;
+	margin-right:0;
+	text-align: center;
+}
+
+.form-administrador .input {
+	clear:both;
+	margin-top:20px;
+}
+
+.form-administrador textarea,
+.form-administrador .cke,
+.form-administrador input[type="text"],
+.form-administrador input[type="email"],
+.form-administrador input[type="password"],
+.form-administrador select{
+	padding:5px;
+	border: 1px #777 solid;
+	font-family: "myriad_prolight", sans-serif;
+	font-size: 16px;
+	width:628px;
+}
+
+
+.form-administrador.columna textarea,
+.form-administrador.columna .input .cke,
+.form-administrador.columna input[type="text"],
+.form-administrador.columna input[type="email"],
+.form-administrador.columna input[type="password"]{
+	width:290px;
+}
+
+.form-administrador.corto textarea,
+.form-administrador.corto .input .cke,
+.form-administrador.corto input[type="text"],
+.form-administrador.corto input[type="email"],
+.form-administrador.corto input[type="password"]{
+	width:525px;
+}
+
+.form-administrador .cke,
+.form-administrador.columna .cke,
+.form-administrador.corto .cke{
+	float:right;
+	margin-bottom: 20px;
+	padding:0;
+	margin-right:10px;
+}
+
+.form-administrador .input select{
+	width:640px;
+}
+
+.form-administrador.columna .input select{
+	width:420px;
+}
+
+.form-administrador.corto .input select{
+	width:535px;
+}
+
+.form-administrador input[type="submit"],
+.form-administrador.corto input[type="submit"],
+.form-administrador.columna input[type="submit"],
+.form-busqueda input[type="submit"]{
+	padding:5px 10px 4px 10px;
+	text-transform:uppercase;
+	background-color: #333;
+	float:right;
+	border: 1px #333 solid;
+	margin-top:20px;
+	color:white;
+	font-family: "myriad_prolight", sans-serif;
+}
+
+.form-administrador input[type="submit"]:hover,
+.form-administrador.columna input[type="submit"]:hover,
+.form-administrador.corto input[type="submit"]:hover,
+.form-busqueda input[type="submit"]:hover{
+	cursor:pointer;
+	background-color: #555;
+}
+
+.input.file{
+	overflow: hidden;
+	position: relative;
+	padding:5px 10px;
+	text-transform:uppercase;
+	background-color: #333;
+	border: 1px #333 solid;
+	margin-top:20px;
+	color:white;
+	cursor:pointer;
+	background-image: url(../img/bkg/upload.png);
+	background-position: right;
+	background-repeat:no-repeat;
+}
+
+.input.file [type="file"]{
+	display:block;
+	opacity:0;
+	filter: alpha(opacity=0);
+	position: absolute;
+    right: 0;
+    top: 0;
+    cursor:pointer;
+}
+
+label.imagen:hover,
+.input.file:hover{
+	cursor:pointer;
+}
+
+#flashMessage{
+	clear: both;
+	text-transform: uppercase;
+	padding:10px;
+	margin-top:10px;
+	background-color: #eee;
+	text-align: center;
+	border: 2px #555 dashed;
+	margin-bottom: 10px;
+}
+
+
+.form-busqueda{
+	width:300px;
+	float:right;
+}
+
+.form-busqueda input[type="text"]{
+	width:210px;
+	padding:5px;
+	border: 1px #777 solid;
+	font-family: "myriad_prolight", sans-serif;
+	font-size: 16px;
+	letter-spacing: 1px;
+	float:left;
+	margin-right:5px;
+}
+
+.form-busqueda input[type="submit"]{
+	height:30px;
+	margin-top:0;
+}
+
+
+/* ERRORES */
+
+.error{
+	width:800px;
+	text-align: center;
+	margin:20px auto;
+}
+
+.error h2{
+	margin-top:50px;
+	font-size:80px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.error p{
+	padding-top:40px;
+	border-top: 1px #555 solid;
+	font-size:40px;
+	width:500px;
+	margin:50px auto;
+}
+
+.login{
+	margin:50px auto;
+	width:800px;
+}
+
+#authMessage{
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top: 1px #555 solid;
+	border-bottom: 1px #555 solid;
+	margin-top:50px;
+	font-size:20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.input.error{
+	width:inherit;
+}
+
+.error-message{
+	clear:both;
+	margin-top:10px;
+	text-align: right;
+}
