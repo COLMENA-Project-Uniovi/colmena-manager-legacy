@@ -24,12 +24,10 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -42,11 +40,7 @@ The current project has been updated here: [https://github.com/LeeScoresby/colme
 
 ### Built With
 
-* [CakePHP](https://cakephp.org/) VERSION 2
-
-
-<!-- LICENSE -->
-## License
+* [CakePHP](https://cakephp.org/) V2
 
 <!-- CONTACT -->
 ## Contact
